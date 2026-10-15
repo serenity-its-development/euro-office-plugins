@@ -1,0 +1,32 @@
+/*
+ * OneOS files — Copyright (C) 2026 Serenity ITS — GNU Affero General Public License v3 or later
+ * (../../LICENSE). Colours follow the editor's theme (onThemeChanged sets the variables below).
+ */
+:root {
+	--of-bg: #ffffff;
+	--of-surface: #f7f7f7;
+	--of-text: #333333;
+	--of-muted: #6b6b6b;
+	--of-border: #cfcfcf;
+	--of-hover: #e0e0e0;
+	--of-accent: #446995;
+	--of-on-accent: #ffffff;
+	--of-error: #c62828;
+}
+html, body { margin: 0; height: 100%; background: var(--of-bg); color: var(--of-text); font: 12px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif; }
+.of { display: flex; flex-direction: column; gap: 8px; padding: 10px; height: 100%; box-sizing: border-box; }
+.of__search { display: flex; gap: 6px; }
+.of__input { flex: 1; min-width: 0; height: 24px; padding: 0 6px; border: 1px solid var(--of-border); border-radius: 2px; background: var(--of-bg); color: var(--of-text); font: inherit; }
+.of__btn { height: 24px; padding: 0 10px; border: 1px solid var(--of-border); border-radius: 2px; background: var(--of-surface); color: var(--of-text); font: inherit; cursor: pointer; white-space: nowrap; }
+.of__btn:hover:not(:disabled) { background: var(--of-hover); }
+.of__btn:disabled { opacity: 0.5; cursor: default; }
+.of__search .of__btn { background: var(--of-accent); border-color: var(--of-accent); color: var(--of-on-accent); }
+.of__crumbs { color: var(--of-muted); }
+.of__crumb { border: 0; background: none; padding: 0; color: var(--of-accent); font: inherit; cursor: pointer; }
+.of__crumb:disabled { color: var(--of-text); cursor: default; }
+.of__status { color: var(--of-muted); min-height: 1em; }
+.of__status--error { color: var(--of-error); }
+.of__list { list-style: none; margin: 0; padding: 0; overflow: auto; flex: 1; }
+.of__row { display: flex; align-items: center; gap: 6px; padding: 4px 2px; border-bottom: 1px solid var(--of-border); }
+.of__name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.of__meta { color: var(--of-muted); white-space: nowrap; }

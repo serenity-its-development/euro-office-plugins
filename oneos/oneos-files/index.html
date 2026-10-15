@@ -1,0 +1,38 @@
+<!--
+ OneOS files — a Euro-Office / ONLYOFFICE editor plugin.
+ Copyright (C) 2026 Serenity ITS
+
+ This program is free software: you can redistribute it and/or modify it under the terms of the
+ GNU Affero General Public License as published by the Free Software Foundation, either version 3
+ of the License, or (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+ even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ Affero General Public License for more details.
+
+ You should have received a copy of the GNU Affero General Public License along with this program
+ (../LICENSE). If not, see <https://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>OneOS files</title>
+		<!-- The plugin SDK is vendored (Apache-2.0, see ../NOTICE): nothing is loaded from elsewhere. -->
+		<script type="text/javascript" src="vendor/plugins.js"></script>
+		<link rel="stylesheet" href="styles/oneos-files.css">
+		<script type="text/javascript" src="scripts/bridge.js"></script>
+		<script type="text/javascript" src="scripts/oneos-files.js"></script>
+	</head>
+	<body>
+		<div class="of">
+			<form class="of__search" id="of-search" autocomplete="off">
+				<input class="of__input" id="of-query" type="search" placeholder="Search your files" aria-label="Search your files" maxlength="200" spellcheck="false">
+				<button class="of__btn" type="submit">Search</button>
+			</form>
+			<div class="of__crumbs" id="of-crumbs"></div>
+			<div class="of__status" id="of-status" role="status" aria-live="polite"></div>
+			<ul class="of__list" id="of-list" aria-label="Your files"></ul>
+		</div>
+	</body>
+</html>

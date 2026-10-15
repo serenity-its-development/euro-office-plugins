@@ -1,0 +1,21 @@
+OneOS editor plugins for Euro-Office / ONLYOFFICE Docs
+Copyright (C) 2026 Serenity ITS
+
+The plugins in this directory (oneos/) are free software, licensed under the GNU Affero General
+Public License version 3 or (at your option) any later version — see LICENSE beside this file.
+They run inside the editor and use its plugin API; they are licensed AGPL-3.0 so no derivative-work
+question arises. OneOS itself talks to them only through postMessage messages (the bridge protocol
+documented in OneOS) and to the document server only over the network.
+
+Third-party code included:
+
+  oneos-files/vendor/plugins.js
+    The ONLYOFFICE plugin SDK (sdkjs-plugins/v1/plugins.js in this repository),
+    (c) Copyright Ascensio System SIA 2021, licensed under the Apache License, Version 2.0
+    (see ../LICENSE at the root of this repository, and its own header). It is vendored unchanged
+    so the plugin loads nothing from another host.
+
+The plugin icons (oneos-files/resources/*.png) are original to this project.
+
+Corresponding source: https://github.com/serenity-its-development/euro-office-plugins (branch
+oneos-files). A server offering these plugins to network users offers this source (AGPL §13).
